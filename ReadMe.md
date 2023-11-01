@@ -5,6 +5,7 @@ This is a simple learning project to learn different Algorithms.
 The Algorithms covered in this repository : 
 - Binary Search
 - Selection Sort
+- Quick Sort
 
 ### Installation
 
