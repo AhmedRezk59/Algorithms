@@ -1,12 +1,17 @@
 <?php
 
-use Algorithms\QuickSort;
+use Algorithms\BreadthFirstSearch;
+use Algorithms\Node;
 
 require('./vendor/autoload.php');
+$sara = new Node('Sara' , true);
+$lara = new Node('Lara' , false,[$sara]);
+$bob = new Node('Bob' , false , [$lara]);
+$ahmed = new Node('Ahmed' , true);
+$queue = new SplQueue();
+$queue->enqueue($bob);
+$queue->enqueue($ahmed);
+
 var_dump(
-    QuickSort::sort([1, 4, 3, 2, 5]),
-    QuickSort::sort([13, 4, 32, 22, 50]),
-    QuickSort::sort([100, 40, 31, 22, 5]),
-    QuickSort::sort([854, 754, 31, 78, 102]),
-    QuickSort::sort([854, 754, 31, 78, 102,102])
+    BreadthFirstSearch::search($queue)
 );
