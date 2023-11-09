@@ -7,6 +7,7 @@ The Algorithms covered in this repository :
 - Selection Sort
 - Quick Sort
 - Breadth First Search
+- Dijkstras algorithm
 
 ### Installation
 

@@ -1,17 +1,34 @@
 <?php
 
-use Algorithms\BreadthFirstSearch;
-use Algorithms\Node;
+use Algorithms\Dijkstras;
 
 require('./vendor/autoload.php');
-$sara = new Node('Sara' , true);
-$lara = new Node('Lara' , false,[$sara]);
-$bob = new Node('Bob' , false , [$lara]);
-$ahmed = new Node('Ahmed' , true);
-$queue = new SplQueue();
-$queue->enqueue($bob);
-$queue->enqueue($ahmed);
 
-var_dump(
-    BreadthFirstSearch::search($queue)
-);
+$graph = [
+    'start' => [
+        'A' => 6,
+        'B' => 2,
+    ],
+    "A" => [
+        "Fin" => 1
+    ],
+    "B" => [
+        "A" => 3,
+        "Fin" => 5,
+    ],
+    "Fin" => []
+];
+
+$costs = [
+    "A" => 6,
+    "B" => 2,
+    "Fin" => PHP_INT_MAX,
+];
+
+$parents = [
+    "A" => "start",
+    "B" => "start",
+    "Fin" => null
+];
+
+var_dump( Dijkstras::reach($graph,$costs,$parents));
