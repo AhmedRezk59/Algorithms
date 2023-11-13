@@ -6,6 +6,7 @@ The Algorithms covered in this repository :
 - Binary Search
 - Selection Sort
 - Quick Sort
+- Merge Sort
 - Breadth First Search
 - Dijkstras algorithm
 
